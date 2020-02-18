@@ -27,16 +27,16 @@ console.log(tableCells);
 // 1. Create a function to perfrom your search and give it two `parameters` — searchInput, names.  Inside the function's code block:
 function simpleSearch(searchInput, names){
   // 1a. Create two `console.log` statements to log out the `parameters` — searchInput, names 
-  console.log(`search input is: ${searchInput}`);
-  console.log(`names are: ${names}`);
+  console.log(`search input is: ${searchInput.value}`);
+  console.log(`names are: ${names.textContent}`);
   // 1b. Loop over the `names` parameter
-  for(let i = 0; i <= names.length; i++){
+  for(let i = 0; i < names.length; i++){
     console.log(`number of names: ${names.length}`);
     // 1b. Remove the 'match' class name from each `names[i]` 
     //names[i].classList.remove = ('');
     // 1c. Create a conditional that checks two conditions:
     // 1ca. If the `searchInput.value.length` does not equal the digit zero AND `names[i].textContent.toLowerCase()` `includes` `searchInput.value.toLowerCase())`
-    if(searchInput.value.length != 0 && names[i].textContent.toLowerCase.inicludes(searchInput.value.toLowerCase())){
+    if(searchInput.value.length != 0 && names[i].textContent.toLowerCase === searchInput.value.toLowerCase()){
       // 1cb. Add the class name 'match` to `names[i]` 
       names[i].classList.add('match');
     }
